@@ -1,97 +1,95 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <link rel='shortcut icon' href='./images/my-photo.jpg' type='image/gif' >
     <title>Khaled Nassar | Front-end Developer</title>
     <meta charset="UTF-8">
-    <meta name='viewport' content='width=device-width, initial-scale= 1.0'>
-    <link rel='stylesheet' type='text/css' href='./css/site.css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./styles/site.css">
   </head>
   <body>
+    <div id="loading_page">
+      <div id="loading_page_top"></div>
+      <div id="loading_page_bottom"></div>
+      <p class="center_by_position">KHALED NASSAR</p>
+    </div>
     <nav>
-      <section id='logo'>
-        KN
-      </section>
-
-      <section id='nav_links'>
-        <a href='#home' onclick="res()">HOME</a>
-        <a href='#my-projects' onclick="res()">WORK</a>
-        <a href='#contact-me' onclick="res()">CONTACT</a>
-      </section>
-      
-      <div id='res_icon'>
-        <p>☰</p>
-      </div>
-    </nav>
-    
-    <header id='home'>
-      <section id='header_text'>
-        <h1>
-          <span id='name'>Hello! I'm <span>Khaled Nassar</span></span><br>
-          <span id='job'>Front-end Developer</span>
-        </h1>
-        <p id='header_quote'>I design and develop responsive, optimized and efficient websites. Available for freelance opportunities.</p>
-      </section>
-
-      <section id='header_photo'>
-        <div id='photo_con'>
+      <section>
+        <div id='personal_img'>
           <img src='./images/8110741f-3c59-4ead-8a7a-f3e3c0869303.jpg' alt='my personal photo'>
         </div>
       </section>
-    </header>
+      <ul id="nav_links">
+        <li class="active"><a href="#">HOME</a></li>
+        <li><a href="#projects">MY WORKS</a></li>
+        <li><a href="#form">CONTACTS</a></li>
+        <li id="mode">✯</li> 
+      </ul>
 
-    <main id='my-projects'>
-      <section id='my_work'>
-        <h2>MY WORK</h2>
+      <div id="toggle_nav"><span class="center_by_position">&#x232F;</span></div> <!-- for responsive-->
+    </nav>
 
-        <div class='item'>
-          <img class='itemPhoto' src='./images/screencapture.png' alt='photo for one of my work'>
-          <div class='itemText'>
-            <p class='title'>BE-SMARTER APP</p>
-            <p class='skills'>HTML5 + CSS3 + Javascript</p>
-            <a href='https://khalednassar500.github.io/be-smarter/'  target="_blank">View Projct</a>
+    <section id="page_content">
+      <header id='header_text' class="center_items_by_flexbox">
+        <h1>
+          <span id='name'>Hello! I'm <span>Khaled Nassar</span></span>
+          <br>
+          <span id='job'>Front-end Developer</span>
+        </h1>
+        <p id='header_quote'>I design and develop responsive, optimized and efficient websites.<br> _ Available for freelance opportunities _</p>
+      </header>
+      <section id="projects">
+        <div class="line"></div> <!-- this div create a special line on the page -->
+
+        <h3 class="section_title">M Y &nbsp; P R O J E C T S</h3>
+        <div class="project">
+          <img src="./images/project-1.png">
+          <div class="projectText center_items_by_flexbox">
+            <h2>BE SMART <br><span>« APP »</span></h2>
+            <p>HTML5 + CSS3 + JS</p>
+            <a class="link_button" href="https://khalednassar500.github.io/be-smarter/" target="_blank">SEE PROJECT</a>
+            <!-- <a class="details_link" href="#">MORE DETAILS</a> -->
           </div>
         </div>
-      </section>
-    </main>
-    <footer id='contact-me'>
-      <h3>LET'S MAKE SOMETHING AWESOME TOGETHER</h3>
-      <section  id='contact_info'>
-        <section id='form'>
-          <h4>Request a quote</h4>
-          <form target="_self" action="https://formsubmit.co/05f768d4bd64bd528c61ec638d4d7b3f" method="POST">
-            <input type="text" name="name" placeholder="Name" required>
-            <input type="email" name="email" placeholder="Email" required>
-            <textarea placeholder="Project details" name="message" required></textarea>
-            <button type="submit">Let's create something cool</button>
-            
-            <input type="hidden" name="_subject" value="Message from Portfolio!">
-            <input type="hidden" name="_template" value="table">
-
-          </form>
-        </section>
-        <section>
-          <h4>Contacts</h4>
-          <div id='gmail'>
-            <img src='./images/gmail.png' alt='gmail icon'>
-            <a href='mailto:knassar212@gmail.com'  target="_blank">knassar212@gmail.com</a>
+        <div class="project">
+          <img src="./images/project-2.png">
+          <div class="projectText center_items_by_flexbox">
+            <h2>FLOWERS STORY <br><span>« WEBSITE »</span></h2>
+            <p>HTML5 + CSS3 + JS</p>
+            <a class="link_button" href="https://khalednassar500.github.io/flowers-story/" target="_blank">SEE PROJECT</a>
+            <!-- <a class="details_link" href="#">MORE DETAILS</a> -->
           </div>
-          <h4 id='follow'>Follow</h4>
-          <div id='social_media'>
-            <a href='https://www.linkedin.com/in/khaled-nassar/' target="_blank">
-              <img src='./images/linkedin.png' alt='linkedin icon'>
-            </a>
-            <a href='https://twitter.com/khalednassar500' target="_blank">
-              <img src='./images/twitter.png' alt='twitter icon'>
-            </a>
-            <a href='https://github.com/khalednassar500' target="_blank">
-              <img src='./images/github.png' alt='github icon'>
-            </a>
-          </div>
-        </section>
-      </section>
-    </footer>
+        </div>
 
-    <script src='./javascript/site.js'></script>
+        <!-- <h3 class="section_title">M Y &nbsp; C E R T I F I C A T E S</h3> -->
+        
+        <div class="line"></div> <!-- this div create a special line on the page -->
+      </section>
+      
+      <form id="form" action="#">
+        <p>
+          👋🙂&nbsp; Say <span> ' HI '</span><br>
+          I always welcome new friends <br> ^_^ 
+        </p>
+        <input type="text" name="Name" placeholder="Your Name">
+        <input type="email" name="E-mail" placeholder="Your E-mail">
+        <textarea placeholder="✎……"></textarea>
+        <button type="submit" class="link_button">
+          SEND
+        </button>
+      </form>
+
+      <address id="contact">
+        <a href="https://twitter.com/khalednassar500" target="_blank">
+          <img src="./images/twitter.png">
+        </a>
+        <a href="https://github.com/khalednassar500" target="_blank">
+          <img src="./images/github.png">
+        </a>
+        <a href="https://www.linkedin.com/in/khalednassar500" target="_blank">
+          <img src="./images/linkedin.png">
+        </a>
+      </address>
+    </section>
+    <script src="./scripts/site.js"></script>
   </body>
 </html>
