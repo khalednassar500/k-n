@@ -1,15 +1,32 @@
-/*-- for responsive --*/
-const RES_ICON = document.getElementById('res_icon');
+// loading behavior
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('loading_page').classList.add('close');
+  setTimeout(() => {
+    document.getElementById('loading_page').style.display = 'none';
+  }, 2000);
+})
 
-function res() {
-  document.getElementById('nav_links').classList.toggle('active')
+/*-- responsive behavior for navigation bar --*/
+const NAV_LINKS = document.getElementById('nav_links');
+const TOGGLE_NAV_BTN = document.getElementById('toggle_nav');
+
+function toggleNav() {
+  let text = TOGGLE_NAV_BTN.firstElementChild 
+  text.innerHTML = text.innerHTML === '⌯' ? '×' : '⌯';
+  NAV_LINKS.classList.toggle('toggle');
 }
-RES_ICON.addEventListener('click', res);
+TOGGLE_NAV_BTN.addEventListener('click', toggleNav);
+NAV_LINKS.addEventListener('click', (e) => {
+  if (e.target.nodeName === 'A') {
+    NAV_LINKS.classList.toggle('toggle');
+    TOGGLE_NAV_BTN.firstElementChild.innerHTML = TOGGLE_NAV_BTN.firstElementChild.innerHTML === '⌯' ? '×' : '⌯';
+  }
+})
 
 /*-- Give the section that occupies the largest area of ​​the screen a special style --*/
-
 /*- get the position of elements on the page -*/
-const CHILDREN = [...document.body.children];
+const MAIN = document.getElementById('page_content')
+const CHILDREN = [...MAIN.children];
 const APPEARANCE_ON_PAGE = [];
 const DISAPPEARED_FROM_PAGE = [];
 
@@ -43,19 +60,11 @@ function mostViewed() {
 }
 
 let prevSection = mostViewed();
-document.getElementById('nav_links').children[mostViewed() - 1].classList.toggle('active');
+
 
 window.onscroll = () => {
-  if (prevSection !== mostViewed()) {
-    document.getElementById('nav_links').children[prevSection - 1].classList.remove('active');
-    document.getElementById('nav_links').children[mostViewed() - 1].classList.toggle('active');
-    prevSection = mostViewed();
-  }
-  if (document.body.scrollTop  >= 100 || document.documentElement.scrollTop >= 100) {
-    document.querySelector('nav').classList.add('scroll')
-  }else {
-    document.querySelector('nav').classList.remove('scroll')
-  }
+  NAV_LINKS.children[prevSection].classList.remove('active');
+  NAV_LINKS.children[mostViewed()].classList.toggle('active');
+  prevSection = mostViewed();
 }
-
 /*----------------------------------------------------------------------------------------------*/
