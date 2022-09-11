@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>resume</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./styles/site.css">
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 18px;
+      }
+      #container {
+        width: 1000px;
+        margin: auto;
+        line-height: 1.6em;
+        margin: 50px auto;
+        box-shadow: 0px 0px 10px 10px #efefef;
+      }
+      header {
+        display: grid;
+        grid-template-columns: 250px auto;
+        padding: 50px 100px 25px 100px;
+        background-color: #f8fafb ; 
+        /* rgba(211, 211, 211, 0.2); */
+      }
+      header img {
+        width: 200px
+      }
+      h1 {
+        font-size: 1.6em;
+        margin-top: 10px;
+      }
+      header section:first-child {
+        width: 250px;
+      }
+      h2 {
+        font-size: 1.3em;
+      }
+      header p {
+        font-size: 1.1em;
+        text-align: justify;
+        line-height: 1.5em;
+      }
+      address {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        font-style: normal;
+      }
+      address div {
+        color: gray;
+        display: flex;
+        align-items: center;
+      }
+      address div {
+        margin-top:  15px;
+        
+      }
+      address img {
+        width: 25px;
+        margin-right: 10px;
+      }
+      address a  {
+        color: #000;
+        font-size: 16px;
+        text-decoration: none;
+      }
+      header section:last-child {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      #work,
+      #skills,
+      #education {
+        padding: 25px 100px;
+
+      }
+      h3 {
+        color: rgba(128, 128, 128, 0.8);
+        font-size: 1.2em;
+        margin-bottom: 25px;
+      }
+      ul,
+      #skills p {
+        margin-left: 50px;
+      }
+      li {
+        margin-bottom: 10px;
+      }
+      #education a {
+        color: #000;
+      }
+      #education img {
+        width: 20px;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <section id="container">
+      <header>
+        <section>
+          <img src="./IMG-20220720-WA0005.png">
+          <h1>Khaled Nassar</h1>
+        </section>
+
+        <section>
+          <h2>Front End Developer</h2>
+          <p>Front-end developer with experience in interactive design. Interested in following the latest technologies to implement a great user interface with a smooth user experience.</p>
+        
+          <address>
+            <div><img src="./174857.png">&nbsp<a href="https://www.linkedin.com/in/khalednassar500" target="_blank">/in/khalednassar500</a></div>
+            <div><img src="./536452.png">&nbsp<a href="https://github.com/khalednassar500" target="_blank">/khalednassar500</a></div>
+            <div><img src="./1041916.png">&nbsp<a href="tel:+201285464572">+2 0128 546 4572</a></div>
+            <div><img src="./3419233.png">&nbsp<a href="https://khalednassar500.github.io/k-n" target="_blank">https://khalednassar500.github.io/k-n</a></div>
+          </address>  
+        </section>
+        
+              
+      </header>
+      
+      
+
+      <section id="work">
+        <h3>Work Experience</h3>
+        <ul>
+          <li>Create websites from zero to deployment based on UI and UX principles</li>
+          <li>converted many PSD designs into real websites using HTML, CSS, and JS and I was interested in making these websites responsive on all screens using responsive design methods.</li>
+          <li>Designed dynamic and interactive pages using HTML5, CSS3, JS.</li>
+        </ul>
+      </section>
+      <section id="skills">
+        <h3>Skills</h3>
+        <p>HTML5 &nbsp - &nbsp CSS3 &nbsp - &nbsp Javascript </p>
+      </section>
+      <section id="education">
+        <h3>Education & Certifications</h3>
+        <ul>
+          <li><a href='https://khalednassar500.github.io/k-n/images/IMG_20220812_155839.jpg' target="_blank">Bachelor's degree from University (FCI-ZU)  &nbsp <img src='./2990159.png'></a></li>
+          <li><a href='https://graduation.udacity.com/confirm/HP5HKKRF' target="_blank">Front End Web Development Professional from Udacity  &nbsp <img src='./2990159.png'></a></li>
+          <li><a href='https://www.freecodecamp.org/certification/khaled-nassar/responsive-web-design' target="_blank">Responsive Web Design Certification from freeCodeCamp  &nbsp <img src='./2990159.png'></a></li>
+        </ul>
+      </section>
+    </section>
+  </body>
+</html>
