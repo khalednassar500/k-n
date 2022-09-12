@@ -11,10 +11,12 @@
         margin: 0;
         padding: 0;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-size: 18px;
+        font-size: 22px;
+        /* font-size: 18px; */
       }
       #container {
-        width: 1000px;
+        width: 1100px;
+        /* width: 1000px; */
         margin: auto;
         line-height: 1.6em;
         margin: 50px auto;
@@ -23,25 +25,27 @@
       header {
         display: grid;
         grid-template-columns: 250px auto;
-        padding: 50px 100px 25px 100px;
+        padding: 75px 75px 50px 75px;
         background-color: #f8fafb ; 
-        /* rgba(211, 211, 211, 0.2); */
+        justify-content: space-between;
       }
       header img {
-        width: 200px
+        width: 100%;
+        /* width: 200px */
+      }
+      header section:last-child {
+        margin-left: 50px;;
       }
       h1 {
         font-size: 1.6em;
         margin-top: 10px;
-      }
-      header section:first-child {
-        width: 250px;
+        text-align: center;
       }
       h2 {
-        font-size: 1.3em;
+        font-size: 1.4em;
       }
       header p {
-        font-size: 1.1em;
+        font-size: 1.2em;
         text-align: justify;
         line-height: 1.5em;
       }
@@ -53,22 +57,21 @@
         font-style: normal;
       }
       address div {
-        color: gray;
-        display: flex;
-        align-items: center;
-      }
-      address div {
         margin-top:  15px;
-        
       }
       address img {
-        width: 25px;
-        margin-right: 10px;
+        width: 30px;
+      }
+      address div:last-child img {
+        width: 33px;
       }
       address a  {
         color: #000;
-        font-size: 16px;
+        font-size: 20px;
         text-decoration: none;
+        color: gray;
+        display: flex;
+        align-items: center;
       }
       header section:last-child {
         display: flex;
@@ -79,7 +82,7 @@
       #work,
       #skills,
       #education {
-        padding: 25px 100px;
+        padding: 25px 75px;
 
       }
       h3 {
@@ -96,9 +99,13 @@
       }
       #education a {
         color: #000;
+        text-decoration: none;
       }
       #education img {
         width: 20px;
+      }
+      #education  {
+        padding-bottom: 50px;
       }
       
     </style>
@@ -116,17 +123,13 @@
           <p>Front-end developer with experience in interactive design. Interested in following the latest technologies to implement a great user interface with a smooth user experience.</p>
         
           <address>
-            <div><img src="./174857.png">&nbsp<a href="https://www.linkedin.com/in/khalednassar500" target="_blank">/in/khalednassar500</a></div>
-            <div><img src="./536452.png">&nbsp<a href="https://github.com/khalednassar500" target="_blank">/khalednassar500</a></div>
-            <div><img src="./1041916.png">&nbsp<a href="tel:+201285464572">+2 0128 546 4572</a></div>
-            <div><img src="./3419233.png">&nbsp<a href="https://khalednassar500.github.io/k-n" target="_blank">https://khalednassar500.github.io/k-n</a></div>
+            <div><a href="https://www.linkedin.com/in/khalednassar500" target="_blank"><img src="./174857.png">&nbsp /in/khalednassar500</a></div>
+            <div><a href="https://github.com/khalednassar500" target="_blank"><img src="./536452.png">&nbsp /khalednassar500</a></div>
+            <div><a href="tel:+201285464572"><img src="./1041916.png">&nbsp +2 0128 546 4572</a></div>
+            <div><a href="https://khalednassar500.github.io/k-n" target="_blank"><img src="./3419233.png">&nbsp https://khalednassar500.github.io/k-n</a></div>
           </address>  
         </section>
-        
-              
       </header>
-      
-      
 
       <section id="work">
         <h3>Work Experience</h3>
@@ -136,10 +139,12 @@
           <li>Designed dynamic and interactive pages using HTML5, CSS3, JS.</li>
         </ul>
       </section>
+
       <section id="skills">
         <h3>Skills</h3>
         <p>HTML5 &nbsp - &nbsp CSS3 &nbsp - &nbsp Javascript </p>
       </section>
+
       <section id="education">
         <h3>Education & Certifications</h3>
         <ul>
