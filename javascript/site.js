@@ -1,10 +1,4 @@
-// loading behavior
-document.addEventListener('DOMContentLoaded', () => {
-  document.getElementById('loading_page').classList.add('close');
-  setTimeout(() => {
-    document.getElementById('loading_page').style.display = 'none';
-  }, 2000);
-})
+
 
 /*-- responsive behavior for navigation bar --*/
 const NAV_LINKS = document.getElementById('nav_links');
@@ -30,7 +24,14 @@ const CHILDREN = [...MAIN.children];
 const APPEARANCE_ON_PAGE = [];
 const DISAPPEARED_FROM_PAGE = [];
 
-CHILDREN.forEach((i) => {
+// loading behavior
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('loading_page').classList.add('close');
+  setTimeout(() => {
+    document.getElementById('loading_page').style.display = 'none';
+  }, 2000);
+
+  CHILDREN.forEach((i) => {
   APPEARANCE_ON_PAGE.push(i.offsetTop - window.innerHeight)
   DISAPPEARED_FROM_PAGE.push(i.offsetTop + i.offsetHeight);
 });
@@ -58,7 +59,7 @@ function mostViewed() {
   
   return ELE[VISIBILE_AREA.indexOf(Math.max(...VISIBILE_AREA))];
 }
-
+console.log('start')
 let prevSection = mostViewed();
 
 
@@ -67,4 +68,5 @@ window.onscroll = () => {
   NAV_LINKS.children[mostViewed()].classList.toggle('active');
   prevSection = mostViewed();
 }
+})
 /*----------------------------------------------------------------------------------------------*/
